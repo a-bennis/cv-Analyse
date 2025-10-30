@@ -1,41 +1,55 @@
 # 🧠 CV ↔ Offre RH — Matching Automatique avec IA (Grok)
 
-Ce projet est une application **Streamlit** qui analyse automatiquement la compatibilité entre un **CV candidat** et une **fiche de poste** à l’aide du modèle **Grok (xAI)** via la librairie **Agno**.  
-L’objectif est de produire un **rapport RH intelligent**, avec un **score de compatibilité (%)** et un **verdict clair et lisible** en français.
+Ce projet est une application **Streamlit** qui permet d’analyser automatiquement la compatibilité entre un **CV de candidat** et une **fiche de poste**.  
+L’objectif est d’aider les **équipes RH et les recruteurs** à évaluer rapidement l’adéquation d’un profil grâce à une **analyse sémantique IA** et un **score de compatibilité intelligent**.
+
+Le système s’appuie sur le modèle **Grok (xAI)** via la librairie **Agno**, offrant une compréhension contextuelle du langage pour extraire les points forts, les manques et générer un **rapport RH clair et lisible** en français.
 
 ---
 
 ## 🚀 Fonctionnalités principales
 
-✅ Extraction automatique du texte depuis les fichiers PDF *(CV et fiche de poste)*  
-✅ Analyse sémantique des **compétences**, **expériences** et **formations**  
-✅ Calcul d’un **score de correspondance RH (%)**  
-✅ Génération d’un **verdict clair** sur l’adéquation du profil  
-✅ Interface fluide et intuitive développée avec **Streamlit**  
-✅ Intégration du modèle **Grok 4 (xAI)** via la librairie **Agno**
+✅ **Analyse complète du CV et de la fiche de poste** (PDF)  
+✅ **Extraction automatique du texte** avec PyMuPDF  
+✅ **Comparaison sémantique intelligente** des compétences et expériences  
+✅ **Score de compatibilité RH (%)** calculé automatiquement  
+✅ **Verdict clair et structuré** pour aider la décision de recrutement  
+✅ **Interface utilisateur moderne et intuitive** via Streamlit  
+✅ **Intégration IA Grok (xAI)** via la librairie Agno
 
 ---
 
-## 🧠 Exemple de sortie
+## 🧩 Objectif du projet
 
-> ### 📊 Rapport de compatibilité RH  
-> **Score global : 82 / 100**  
->  
-> **Verdict :** Le candidat correspond bien au poste, avec des compétences alignées en **Python**, **Power BI** et **analyse de données**.  
-> Quelques lacunes en **SQL avancé** et en **expérience Cloud**, mais un excellent potentiel global.
+L’application vise à :
+- **Automatiser la présélection** des candidats sur la base de critères objectifs.  
+- **Réduire le temps de traitement** des candidatures répétitives.  
+- **Aider les recruteurs** à se concentrer sur les profils réellement pertinents.  
+- **Améliorer la transparence** et la cohérence des décisions RH.  
+
+Grâce à une architecture simple, tout le traitement — de l’extraction PDF jusqu’au rapport RH final — est effectué dans un **seul script (`app.py`)**, rendant le projet facile à déployer et à maintenir.
 
 ---
 
 ## 🖼️ Aperçu de l’application
 
-### Interface principale
-![Interface Streamlit](image.png)
-
- 
+![Interface Streamlit](./image.png)
 
 ---
 
-## 🛠️ Installation et configuration
+## 🧠 Exemple de résultat
+
+> ### 📊 Rapport de compatibilité RH  
+> **Score global : 85 / 100**  
+>  
+> **Compétences clés alignées :** Python, Power BI, SQL, Analyse de données  
+> **Points à améliorer :** Connaissances Cloud, expérience en DataOps  
+>  
+> **Verdict :** Candidat **hautement compatible** avec le poste. Excellent potentiel d’intégration.
+
+---
+
+## 🛠️ Installation et exécution
 
 ### 1. Cloner le dépôt
 ```bash
