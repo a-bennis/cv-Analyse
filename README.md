@@ -1,33 +1,61 @@
-# 🧠 CV ↔ Offre RH — Matching Automatique avec IA (Grok)
+# 🧠 CV ↔ Offre RH — Système de Matching Automatique par IA (Grok xAI)
 
-Ce projet est une application **Streamlit** qui permet d’analyser automatiquement la compatibilité entre un **CV de candidat** et une **fiche de poste**.  
-L’objectif est d’aider les **équipes RH et les recruteurs** à évaluer rapidement l’adéquation d’un profil grâce à une **analyse sémantique IA** et un **score de compatibilité intelligent**.
-
-Le système s’appuie sur le modèle **Grok (xAI)** via la librairie **Agno**, offrant une compréhension contextuelle du langage pour extraire les points forts, les manques et générer un **rapport RH clair et lisible** en français.
+Ce projet est une application **Streamlit** qui permet d’analyser automatiquement la compatibilité entre un **CV de candidat** et une **fiche de poste** grâce à l’intelligence artificielle.  
+Elle exploite le modèle **Grok 4 (xAI)** via la librairie **Agno**, combinant **NLP avancé**, **analyse sémantique** et **raisonnement intelligent** pour produire un **rapport RH complet, clair et objectif**.
 
 ---
 
-## 🚀 Fonctionnalités principales
+## 🎯 Objectif du projet
 
-✅ **Analyse complète du CV et de la fiche de poste** (PDF)  
-✅ **Extraction automatique du texte** avec PyMuPDF  
-✅ **Comparaison sémantique intelligente** des compétences et expériences  
-✅ **Score de compatibilité RH (%)** calculé automatiquement  
-✅ **Verdict clair et structuré** pour aider la décision de recrutement  
-✅ **Interface utilisateur moderne et intuitive** via Streamlit  
-✅ **Intégration IA Grok (xAI)** via la librairie Agno
+Les processus de recrutement reposent souvent sur une lecture manuelle et chronophage des CV.  
+Ce projet vise à **automatiser cette étape clé** en évaluant la compatibilité entre un profil et une offre d’emploi selon plusieurs axes :
+
+- **Analyse sémantique des compétences et expériences**
+- **Identification des correspondances techniques et comportementales**
+- **Calcul d’un score de compatibilité (%)**
+- **Génération d’un verdict clair et explicatif**
+
+Grâce à l’IA, le système agit comme un **assistant RH intelligent**, capable d’interpréter le contenu des documents PDF, d’en extraire les informations clés et de déterminer si le profil correspond réellement à l’offre.
 
 ---
 
-## 🧩 Objectif du projet
+## ⚙️ Fonctionnement du système
 
-L’application vise à :
-- **Automatiser la présélection** des candidats sur la base de critères objectifs.  
-- **Réduire le temps de traitement** des candidatures répétitives.  
-- **Aider les recruteurs** à se concentrer sur les profils réellement pertinents.  
-- **Améliorer la transparence** et la cohérence des décisions RH.  
+1. **Téléversement des fichiers**
+   - L’utilisateur importe un **CV PDF** et une **fiche de poste PDF**.
 
-Grâce à une architecture simple, tout le traitement — de l’extraction PDF jusqu’au rapport RH final — est effectué dans un **seul script (`app.py`)**, rendant le projet facile à déployer et à maintenir.
+2. **Extraction du texte**
+   - Le module d’extraction lit le contenu des deux fichiers à l’aide de **PyMuPDF (fitz)**.
+
+3. **Analyse NLP**
+   - Le modèle **Grok (xAI)** traite le texte et extrait :
+     - Compétences techniques et soft skills
+     - Expériences et projets significatifs
+     - Formations et certifications
+
+4. **Matching IA**
+   - Une comparaison sémantique est effectuée pour déterminer :
+     - Les **points communs**
+     - Les **écarts de compétences**
+     - Le **score global de correspondance**
+
+5. **Rapport RH**
+   - L’application affiche un **rapport lisible** contenant :
+     - ✅ Le **score de compatibilité (%)**
+     - 💬 Un **verdict clair**
+     - 📈 Les **forces et faiblesses** du candidat
+
+---
+
+## 🧠 Exemple de résultat
+
+> ### 📊 Rapport de compatibilité RH  
+> **Score global : 88 / 100**  
+>  
+> **Compétences clés alignées :** Python, Power BI, Analyse de données, Machine Learning  
+> **Points à améliorer :** Cloud computing, gestion de bases de données massives  
+>  
+> **Verdict :** Candidat **hautement compatible** avec le poste. Excellent potentiel d’évolution dans une équipe data.
 
 ---
 
@@ -37,21 +65,52 @@ Grâce à une architecture simple, tout le traitement — de l’extraction PDF 
 
 ---
 
-## 🧠 Exemple de résultat
-
-> ### 📊 Rapport de compatibilité RH  
-> **Score global : 85 / 100**  
->  
-> **Compétences clés alignées :** Python, Power BI, SQL, Analyse de données  
-> **Points à améliorer :** Connaissances Cloud, expérience en DataOps  
->  
-> **Verdict :** Candidat **hautement compatible** avec le poste. Excellent potentiel d’intégration.
-
----
-
 ## 🛠️ Installation et exécution
 
 ### 1. Cloner le dépôt
 ```bash
 git clone https://github.com/a-bennis/cv-analyse.git
 cd cv-analyse
+📁 Structure du projet
+cv-analyse/
+├── app.py                # Application principale Streamlit
+├── agents/
+│   ├── extract_agent.py  # Extraction de texte depuis les PDF
+│   ├── nlp_agent.py      # Analyse NLP des CV et fiches de poste
+│   ├── match_agent.py    # Calcul du score et correspondances
+│   └── recruiter_agent.py# Interface finale du rapport RH
+├── requirements.txt      # Dépendances Python
+├── .env                  # Clé API (xAI)
+├── image.png             # Capture de l’application
+└── README.md             # Documentation du projet
+
+🧩 Technologies utilisées
+Technologie	Description
+Python 3.11+	Langage principal
+Streamlit	Interface utilisateur web
+PyMuPDF (fitz)	Extraction de texte PDF
+Agno	Orchestration des agents IA
+xAI (Grok)	Modèle d’analyse sémantique
+dotenv	Gestion des variables d’environnement
+💼 Cas d’utilisation
+
+Recruteurs : évaluation rapide et automatisée des candidatures.
+
+Entreprises : tri des CV à grande échelle avec critères objectifs.
+
+Candidats : auto-évaluation avant de postuler à une offre.
+
+Écoles / universités : orientation professionnelle et conseil RH.
+
+👨‍💻 Auteur
+
+Bennis Abdelhak
+🎓 Étudiant en Ingénierie Informatique et Réseaux (Option MIAGE)
+💡 Passionné par l’IA, le NLP et l’automatisation RH
+📍 Casablanca, Maroc
+📧 Bennis_Abdelhak@emsi-edu.ma
+
+🌐 GitHub - a-bennis
+
+📄 Licence
+Projet distribué sous la licence MIT.
