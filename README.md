@@ -29,10 +29,9 @@ L’objectif est de produire un **rapport RH intelligent**, avec un **score de c
 ## 🖼️ Aperçu de l’application
 
 ### Interface principale
-![Interface Streamlit](./image.png)
+![Interface Streamlit](image.png)
 
-### Exemple de rapport généré
-![Rapport RH](./image.png)
+ 
 
 ---
 
