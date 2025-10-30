@@ -71,46 +71,49 @@ Grâce à l’IA, le système agit comme un **assistant RH intelligent**, capabl
 ```bash
 git clone https://github.com/a-bennis/cv-analyse.git
 cd cv-analyse
-📁 Structure du projet
-cv-analyse/
-├── app.py                # Application principale Streamlit
-├── agents/
-│   ├── extract_agent.py  # Extraction de texte depuis les PDF
-│   ├── nlp_agent.py      # Analyse NLP des CV et fiches de poste
-│   ├── match_agent.py    # Calcul du score et correspondances
-│   └── recruiter_agent.py# Interface finale du rapport RH
-├── requirements.txt      # Dépendances Python
-├── .env                  # Clé API (xAI)
-├── image.png             # Capture de l’application
-└── README.md             # Documentation du projet
 
-🧩 Technologies utilisées
-Technologie	Description
-Python 3.11+	Langage principal
-Streamlit	Interface utilisateur web
-PyMuPDF (fitz)	Extraction de texte PDF
-Agno	Orchestration des agents IA
-xAI (Grok)	Modèle d’analyse sémantique
-dotenv	Gestion des variables d’environnement
-💼 Cas d’utilisation
+---
 
-Recruteurs : évaluation rapide et automatisée des candidatures.
+## 🧩 Technologies utilisées
 
-Entreprises : tri des CV à grande échelle avec critères objectifs.
+| **Technologie** | **Description** |
+|------------------|-----------------|
+| 🐍 **Python 3.11+** | Langage principal |
+| 🎨 **Streamlit** | Interface utilisateur web |
+| 📄 **PyMuPDF (fitz)** | Extraction de texte PDF |
+| 🤖 **Agno** | Orchestration des agents IA |
+| 🧠 **xAI (Grok)** | Modèle d’analyse sémantique |
+| ⚙️ **dotenv** | Gestion des variables d’environnement |
 
-Candidats : auto-évaluation avant de postuler à une offre.
+---
 
-Écoles / universités : orientation professionnelle et conseil RH.
+## 💼 Cas d’utilisation
 
-👨‍💻 Auteur
+- **Recruteurs** : évaluation rapide et automatisée des candidatures  
+- **Entreprises** : tri des CV à grande échelle avec critères objectifs  
+- **Candidats** : auto-évaluation avant de postuler à une offre  
+- **Écoles / universités** : orientation professionnelle et accompagnement RH  
 
-Bennis Abdelhak
-🎓 Étudiant en Ingénierie Informatique et Réseaux (Option MIAGE)
-💡 Passionné par l’IA, le NLP et l’automatisation RH
-📍 Casablanca, Maroc
-📧 Bennis_Abdelhak@emsi-edu.ma
+---
 
-🌐 GitHub - a-bennis
+## 👨‍💻 Auteur
 
-📄 Licence
-Projet distribué sous la licence MIT.
+**Bennis Abdelhak**  
+🎓 Étudiant en Ingénierie Informatique et Réseaux *(Option MIAGE)*  
+💡 Passionné par l’IA, le NLP et l’automatisation RH  
+📍 Casablanca, Maroc  
+📧 [Bennis_Abdelhak@emsi-edu.ma](mailto:Bennis_Abdelhak@emsi-edu.ma)  
+🌐 [GitHub - a-bennis](https://github.com/a-bennis)
+
+---
+
+## 📄 Licence
+
+Projet distribué sous la licence **MIT**.  
+Vous êtes libre de l’utiliser, le modifier et le distribuer avec mention de l’auteur original.
+
+---
+
+<p align="center">
+  <b>© 2025 — CV ↔ Offre RH | Propulsé par Grok (xAI) & Agno</b>
+</p>
